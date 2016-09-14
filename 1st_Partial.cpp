@@ -54,6 +54,14 @@ vector<int> dfaMatcher(string p, string t)
     return result;
 }
 
+void printResult(vector<int> result) {
+    cout <<"[ ";
+    for (int i = 0; i < result.size(); i++){
+        cout << result [i] << " ";
+    }
+
+    cout << "]\n";
+}
 
 int main()
 {
@@ -63,6 +71,6 @@ int main()
     cout << "T: ";
     cin >> cadena2;
     vector<int> result = dfaMatcher(cadena1, cadena2);
-
+    printResult(result);
     return 0;
 }

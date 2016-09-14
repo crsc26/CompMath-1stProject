@@ -14,18 +14,24 @@
 
 using namespace std;
 
-vector<int> dfaMatcher(string p, string t){
+vector<int> dfaMatcher(string p, string t)
+{
     vector<int> result =  vector<int>();
-    for(int i = 0; i < t.size();i++){
-        if(t[i] == p[0]){
+    for(int i = 0; i < t.size();i++)
+    {
+        if(t[i] == p[0])
+        {
             bool match = true;
-            for(int j=0;j < p.size();j++){
-                if(i+j < t.size() && t[i+j] != p[j]){
+            for(int j=0;j < p.size();j++)
+            {
+                if(i+j < t.size() && t[i+j] != p[j])
+                {
                     match = false;
                     break;
                 }
             }
-            if(match){
+            if(match)
+            {
                 result.push_back(i);
             }
         }

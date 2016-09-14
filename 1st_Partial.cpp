@@ -24,14 +24,17 @@ vector<int> dfaMatcher(string p, string t)
             bool match = true;
             for(int j=0;j < p.size();j++)
             {
-                if(i+j < t.size() && t[i+j] != p[j])
+                cout << "p[" << j << "]=" << p[j] << " t[" << i+j << "]=" << t[i+j] << endl;
+                if(i+j >= t.size() || t[i+j] != p[j])
                 {
+                    cout << "false match" << endl;
                     match = false;
                     break;
                 }
             }
             if(match)
             {
+                cout << "match = " << i << endl;
                 result.push_back(i);
             }
         }

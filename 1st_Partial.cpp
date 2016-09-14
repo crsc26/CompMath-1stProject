@@ -8,42 +8,29 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <cstdlib>
+#include <cstdio>
 
 using namespace std;
 
-class Grafo(string)
-{
-private:
-
-
-
-public:
-
-    Grafo(){} // Constructor
-
-    Grafo(string cadena)
-    {
-
+vector<int> dfaMatcher(string p, string t){
+    vector<int> result =  vector<int>();
+    for(int i = 0; i < t.size();i++){
+        if(t[i] == p[0]){
+            
+        }
     }
-
-    string cadena; // Parámetros
-
-    void AFND()
-    {
-        // Función
-    }
-
-    ~Grafo() // Destructor
-    {
-        //cadena = 0;
-    }
-};
+    return result;
+}
 
 int main()
 {
-    string cadena;
+    string cadena1, cadena2;
     cout << "Indique la cadena:" << endl;
-    cin >> cadena << endl;
+    cin >> cadena1 << endl;
+    cout << "Indique la cadena:" << endl;
+    cin >> cadena2 << endl;
 
     Grafo(cadena);
 
